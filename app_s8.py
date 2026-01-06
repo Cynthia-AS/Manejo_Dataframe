@@ -6,7 +6,7 @@ st.sidebar.title("Parámetros")
 
 modulo=st.sidebar.selectbox("Seleccione un modulo",["Filtros","Querys","Consultas","Agrupaciones","Muestras"])
 
-df=pd.read_csv("Datos_S8/ds_salaries.csv")
+df=pd.read_csv("ds_salaries.csv")
 
 if modulo == "Filtros" :
     
@@ -59,4 +59,5 @@ elif modulo=="Muestras":
     st.write(muestra_aleatoria)
 
     muestra_aleatoria2=df.sample(frac=float(st.number_input("Ingrese una fraccion")),random_state=42)
+
     st.write(muestra_aleatoria2)
